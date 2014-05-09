@@ -31,7 +31,7 @@ public class UpdateArtistFile
 
 	    if (!found)
 	    {
-		System.out.println ("Investment " + fName +" "+ lName + " was not found.");
+		System.out.println ("Artist " + fName +" "+ lName + " was not found.");
 		System.out.println ("Would you like to enter another Artist Name?");
 
 		choice = UserInterface.getChar();
@@ -176,6 +176,7 @@ public class UpdateArtistFile
     }
 
   }  
+
 	//Desc: deletes the artist file selected by searching for lastname, 
     //      firstname
     //Pre: the ArtistFile.txt file must exist
