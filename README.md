@@ -8,9 +8,7 @@ public class UpdateArtistFile
     //Post: The Artist file is updated
     public static void updateArtistFile()
     {
-    //
-    // modifies an investment.
-    //
+
     try
     {
 	boolean	      done = false;		        // terminates while-loop
@@ -115,10 +113,10 @@ public class UpdateArtistFile
 	    System.out.println ("\t" + e);
     }
 
-  }  // manageInvestment
+  }  
 	
 
-	//Desc: adds a new artist file to the text file
+    //Desc: adds a new artist file to the text file
     //Pre: the ArtistFile.txt file must exist
     //Post: A new artist file is created
     public static void addArtistFile()	
@@ -177,8 +175,7 @@ public class UpdateArtistFile
 	    System.out.println ("\t" + e);
     }
 
-  }  // manageInvestment
-
+  }  
 	//Desc: deletes the artist file selected by searching for lastname, 
     //      firstname
     //Pre: the ArtistFile.txt file must exist
