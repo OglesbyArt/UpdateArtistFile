@@ -21,7 +21,7 @@ public class UpdateArtistFile
 
 	while (!found && !done)
 	{
-            System.out.println ("Please enter the first name and last name of Artist" +
+            System.out.println ("Please enter the first name and press <ENTER> and last name of Artist and press <ENTER>" +
                                 " you want to change : ");
 
             fName = UserInterface.getString();
