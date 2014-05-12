@@ -183,10 +183,7 @@ public class UpdateArtistFile
     //Post: The Artist file is deleted
     public static void deleteArtistFile()
     {
-        
-	System.out.println ("Enter First and Last Name of Artist you want to delete: ");
-	String fname = UserInterface.getString();
-        String lname = UserInterface.getString();
-	//not sure how to do this yet
+        Artist a = new Artist();
+	a.delete();
     }
 }
