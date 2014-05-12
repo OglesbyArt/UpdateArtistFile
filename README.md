@@ -109,7 +109,7 @@ public class UpdateArtistFile
     }
     catch (Exception e)
     {
-	    System.out.println ("***** Error: AssetManager.manageInvestment() () *****");
+	    System.out.println ("***** Error: UpdateArtistFile.updateArtist() () *****");
 	    System.out.println ("\t" + e);
     }
 
@@ -155,7 +155,7 @@ public class UpdateArtistFile
 			 
 			catch (Exception e)
 			{
-			    System.out.println ("***** Error: UpdateArtistFile.updateArtist() *****");
+			    System.out.println ("***** Error: UpdateArtistFile.addArtistFile() *****");
 			    System.out.println ("\t" + e);
 			}
 
@@ -171,19 +171,9 @@ public class UpdateArtistFile
     }
     catch (Exception e)
     {
-	    System.out.println ("***** Error: AssetManager.manageInvestment() () *****");
+	    System.out.println ("***** Error: UpdateArtistFile.addArtistFile() () *****");
 	    System.out.println ("\t" + e);
     }
 
   }  
-
-	//Desc: deletes the artist file selected by searching for lastname, 
-    //      firstname
-    //Pre: the ArtistFile.txt file must exist
-    //Post: The Artist file is deleted
-    public static void deleteArtistFile()
-    {
-        Artist a = new Artist();
-	a.delete();
-    }
 }
