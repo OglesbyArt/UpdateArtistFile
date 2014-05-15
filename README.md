@@ -1,5 +1,4 @@
-UpdateArtistFile
-================
+
 public class UpdateArtistFile  
 {
 
@@ -32,7 +31,7 @@ public class UpdateArtistFile
 	    if (!found)
 	    {
 		System.out.println ("Artist " + fName +" "+ lName + " was not found.");
-		System.out.println ("Would you like to enter another Artist Name?");
+		System.out.println ("Would you like to enter another Artist Name? y/n");
 
 		choice = UserInterface.getChar();
 
@@ -59,7 +58,7 @@ public class UpdateArtistFile
                     System.out.println ("\t        1. Update Artist first name\n");
                     System.out.println ("\t        2. Update Artist last name\n");
                     System.out.println ("\t        3. Update Artist fashionability value\n");
-                    System.out.println ("\t        4. Exit to menu\n\n");
+                    System.out.println ("\t        Press <ENTER> twice to return to main menu\n\n");//doesnt work
                     System.out.println ("Enter your choice and press <ENTER>: ");
 
                     try
@@ -80,7 +79,6 @@ public class UpdateArtistFile
                               a.updateFashionabilityValue();
                               break;
 
-                            case '4':
                             case '\n':
                               done = true;
 				  break;
@@ -134,16 +132,8 @@ public class UpdateArtistFile
 			System.out.println ("\t           ADD NEW ARTIST TO FILE\n\n");
 			System.out.println ("\t Oglesby Art Pricing System\n\n");
 			System.out.println ("\t        Enter 'q' and press <ENTER> to return to menu\n\n\n");
-                        System.out.println ("\t        Enter Artists First Name: ");
-                        String fname = UserInterface.getString();
-                        a.setArtistFirstName(fname);
-			System.out.println ("\t        Enter Artists Last Name: ");
-                        String lname = UserInterface.getString();
-                        a.setArtistLastName(lname);
-			System.out.println ("\t        Enter Artists Fashionability Value: ");
-                        int fash = UserInterface.getInt();
-                        a.setArtistFashionabilityValue(fash);
 
+                        a.readInRecord();
 			try
 			{
 			    choice = UserInterface.getChar();
@@ -162,6 +152,7 @@ public class UpdateArtistFile
 			if (!done)
 			{
 		            a.print ();
+                            System.out.println ("\t        Press <ENTER> to return to menu");
 		            UserInterface.pressEnter();
 			}
 		    }
