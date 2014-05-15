@@ -121,9 +121,9 @@ public class UpdateArtistFile
     {
         try
         {
-            boolean	      done = false;		        // terminates while-loop
-            char	      choice;	                        // user's choice
-            Artist    a = new Artist();    // investment to be modified
+            boolean	      done = false;     // terminates while-loop
+            char	      choice;	         // user's choice
+            Artist    a = new Artist();    // Artist to be modified
 
 		while (!done)
 		{
@@ -131,31 +131,17 @@ public class UpdateArtistFile
 
 			System.out.println ("\t           ADD NEW ARTIST TO FILE\n\n");
 			System.out.println ("\t Oglesby Art Pricing System\n\n");
-			System.out.println ("\t        Enter 'q' and press <ENTER> to return to menu\n\n\n");
 
                         a.readInRecord();
-			try
-			{
-			    choice = UserInterface.getChar();
-                            if (choice =='q')
-                            {
-				break;
-                            }
-			}
-			 
-			catch (Exception e)
-			{
-			    System.out.println ("***** Error: UpdateArtistFile.addArtistFile() *****");
-			    System.out.println ("\t" + e);
-			}
 
 			if (!done)
 			{
 		            a.print ();
                             System.out.println ("\t        Press <ENTER> to return to menu");
 		            UserInterface.pressEnter();
+                            done = true;
 			}
-		    }
+		}
 		
 
 	a.save ();
